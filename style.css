@@ -9,6 +9,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 nav ul {
     display: flex;
 }
@@ -19,6 +23,7 @@ nav ul * {
     color: #8E8E8E;
     text-decoration: none;
     transition: .5s;
+    font-size: max(2vh, 1.25vw);
 }
 
 a:hover, .selected {
@@ -38,8 +43,54 @@ h1 {
 
 p {
     margin-left: 5vw;
-    font-size: 2vw;
+    font-size: max(2vh, 2vw);
     margin-right: 20vw;
+}
+
+.animated {
+    animation: appear 1s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        translate: -100px;
+    }
+    to {
+        opacity: 1;
+        translate: 0px;
+    }
+}
+
+.CTA {
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+    margin-left: 5vw;
+    font-size: max(2vh, 2vw);
+
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+}
+
+.CTA:hover {
+    background-color: #FF4040;
+    color: white;
+}
+
+.material-symbols-outlined {
+    margin-left: 20px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 800,
+    'GRAD' 1,
+    'opsz' 32;
 }
 
 .red {
@@ -53,6 +104,7 @@ p {
     border-radius: 100%;
     filter: blur(250px);
     position: absolute;
+    transition: 10s linear;
 }
 
 #red-ambilight {
