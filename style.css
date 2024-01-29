@@ -21,7 +21,7 @@ nav ul * {
     transition: .5s;
 }
 
-a:hover {
+a:hover, .selected {
     color: white;
     text-decoration: underline;
 }
