@@ -123,6 +123,10 @@ article > p {
     color: #318ACA;
 }
 
+.green {
+    color: #2fac2f;
+}
+
 .ambilight {
     z-index: -1;
     height: 300px;
@@ -152,13 +156,16 @@ article > p {
     height: 30vh;
 }
 
-
 .trans-red-line {
     background: linear-gradient(180deg, rgba(255, 64, 64, 0) 0%, rgba(255, 64, 64, 1) 100%);
 }
 
 .red-blue-line {
-    background: linear-gradient(180deg, rgba(255, 64, 64, 0) 0%, #318ACA 100%);
+    background: linear-gradient(180deg, rgba(255, 64, 64, 0) 0%, rgba(49, 138, 202, 1) 100%);
+}
+
+.blue-green-line {
+    background: linear-gradient(180deg, rgba(49, 138, 202, 0) 0%, rgba(47, 172, 47, 1) 100%);
 }
 
 article > p {
@@ -182,7 +189,7 @@ footer > img {
     height: 50%;
 }
 
-ol {
+ul {
     margin-left: 5vw;
     font-size: max(2vh, 2vw);
     color: white;
