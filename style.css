@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: black;
-    overflow: hidden;
+    background-color: black; 
+    margin: 0px;   
 }
 
 a {
@@ -36,15 +36,32 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 50;
 }
 
+h2 {
+    display: flex;
+    font-size: max(4vw, 4vh);
+    margin-left: 5vw;
+    margin-top: 16px;
+}
+
 h1 {
-    font-size: 7vw;
+    font-size: max(7vw, 7vh);
     margin-left: 5vw;
 }
 
-p {
+body > p {
     margin-left: 5vw;
     font-size: max(2vh, 2vw);
     margin-right: 20vw;
+}
+
+.icon {
+    margin: 0px;
+    font-size: max(4vh, 4vw);
+    margin-right: 8px;
+}
+
+article > p {
+    margin-left: 5vw;
 }
 
 .animated {
@@ -63,8 +80,8 @@ p {
 }
 
 .CTA {
-    background-color: white;
-    color: black;
+    border: solid 2px white;
+    color: white;
     padding: 15px 20px;
     font-weight: 600;
     transition: .5s;
@@ -79,12 +96,17 @@ p {
     width: min-content;
 }
 
-.CTA:hover {
+.CTA-red:hover {
     background-color: #FF4040;
-    color: white;
+    border: #FF4040 solid 2px;
 }
 
-.material-symbols-outlined {
+.CTA-blue:hover {
+    background-color: #318ACA;
+    border: #318ACA solid 2px;
+}
+
+.CTA .material-symbols-outlined {
     margin-left: 20px;
     font-variation-settings:
     'FILL' 0,
@@ -97,13 +119,17 @@ p {
     color: #FF4040;
 }
 
+.blue {
+    color: #318ACA;
+}
+
 .ambilight {
     z-index: -1;
     height: 300px;
     width: 300px;
     border-radius: 100%;
     filter: blur(250px);
-    position: absolute;
+    position: fixed;
     transition: 10s linear;
 }
 
@@ -115,4 +141,49 @@ p {
 #purple-ambilight {
     background: #D940FF;
     right: 0px;
+}
+
+.line {
+    margin-top: 10vh;
+    position: relative;
+    left: calc(5vw + max(4vh, 4vw) / 2);
+    top: 0;
+    width: 4px;
+    height: 30vh;
+}
+
+
+.trans-red-line {
+    background: linear-gradient(180deg, rgba(255, 64, 64, 0) 0%, rgba(255, 64, 64, 1) 100%);
+}
+
+.red-blue-line {
+    background: linear-gradient(180deg, rgba(255, 64, 64, 0) 0%, #318ACA 100%);
+}
+
+article > p {
+    width: 75%;
+    font-size: max(2.25vh, 2.25vw)
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    margin: 0px;
+    margin-top: 20vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > img {
+    height: 50%;
+}
+
+ol {
+    margin-left: 5vw;
+    font-size: max(2vh, 2vw);
+    color: white;
 }
